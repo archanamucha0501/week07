@@ -126,7 +126,9 @@ jobs:
 
       - name: Run frontend tests
         working-directory: frontend
-        run: npm run test:run
+        run: |
+          npm run test:run
+          exit 1
 
   # =========================================================
   # Build and Push Docker Images
